@@ -31,7 +31,14 @@ public class Calculadora {
 		return primeiroNumero - segundoNumero;
 	}
 
-	
+	/**
+	 * Realiza a operação de divisão entre dois números.
+	 * 
+	 * @param dividendo O número a ser dividido
+	 * @param divisor O número pelo qual será dividido
+	 * @return O resultado da divisão
+	 * @throws IllegalArgumentException Se o divisor for zero
+	 */
 	public double dividir(double dividendo, double divisor) {
 		if (divisor == 0.0) {
 			throw new IllegalArgumentException("Divisão por zero não é permitida");

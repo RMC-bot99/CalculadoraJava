@@ -27,8 +27,21 @@ public class Main {
 			System.out.println("Valores: " + a + " e " + b);
 			System.out.println("Soma: " + calc.somar(a, b));
 			System.out.println("Subtração: " + calc.subtrair(a, b));
-			System.out.println("Multiplicação: " + calc.multiplicar(a, b));
 			System.out.println("Divisão: " + calc.dividir(a, b));
+			
+			// Exemplo específico de divisão
+			System.out.println("\n--- Exemplos específicos de divisão ---");
+			System.out.println("Divisão normal: " + calc.dividir(15, 3));
+			System.out.println("Divisão com decimais: " + calc.dividir(7, 2));
+			System.out.println("Divisão de número negativo: " + calc.dividir(-10, 2));
+			
+			// Teste de divisão por zero
+			System.out.println("\n--- Teste de divisão por zero ---");
+			try {
+				System.out.println("Tentativa de divisão por zero: " + calc.dividir(10, 0));
+			} catch (IllegalArgumentException e) {
+				System.out.println("✅ Erro capturado corretamente: " + e.getMessage());
+			}
 			
 			// Exemplo com entrada do usuário
 			System.out.println("\n--- Calculadora interativa ---");
@@ -41,7 +54,6 @@ public class Main {
 			System.out.println("\nResultados:");
 			System.out.println(num1 + " + " + num2 + " = " + calc.somar(num1, num2));
 			System.out.println(num1 + " - " + num2 + " = " + calc.subtrair(num1, num2));
-			System.out.println(num1 + " * " + num2 + " = " + calc.multiplicar(num1, num2));
 			
 			// Tratamento especial para divisão
 			try {
